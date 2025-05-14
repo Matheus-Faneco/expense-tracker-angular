@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="submit()" >
+  <label >Titulo</label>
+  <input formControlName="title" type="text">
+
+  <label>Valor</label>
+  <input formControlName="amount" type="number">
+
+  <label>Descrição</label>
+  <input formControlName="description" type="text">
+
+  <label>Data</label>
+  <input formControlName="date" type="date">
+
+  <label>Categoria</label>
+  <select formControlName="category">
+    <option value="groceries">Mercadorias</option>
+    <option value="leisure">Lazer</option>
+    <option value="electronics">Eletrônicos</option>
+    <option value="utilities">Utilitários</option>
+    <option value="clothing">Roupas</option>
+    <option value="health">Saúde</option>
+    <option value="others">Outros</option>
+  </select>
+
+  <button type="submit">Salvar despesa</button>
+</form>

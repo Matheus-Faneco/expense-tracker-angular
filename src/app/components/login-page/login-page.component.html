@@ -1,14 +1,13 @@
-<form class="login-form">
-  <h1>Login</h1>
-  <div class="form-group">
-    <label>Usuário</label>
-    <input type="text" class="form-control" required>
-  </div>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <mat-form-field>
+    <mat-label>Usuário</mat-label>
+    <input matInput formControlName="username" placeholder="Digite seu usuário" />
+  </mat-form-field>
 
-  <div class="form-group">
-    <label>Senha</label>
-    <input type="password" class="form-control" required>
-  </div>
+  <mat-form-field>
+    <mat-label>Senha</mat-label>
+    <input matInput type="password" formControlName="password" placeholder="Digite sua senha" />
+  </mat-form-field>
 
-
+  <button type="submit">Entrar</button>
 </form>
